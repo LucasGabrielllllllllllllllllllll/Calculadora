@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <!-- Importa o arquivo CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="calculator">
+    <!-- Display onde o resultado e os dígitos aparecem -->
+    <input type="text" class="display" disabled />
+
+    <!-- Área dos botões -->
+    <div class="buttons">
+      <!-- Linha 1 -->
+      <button class="btn btn-special" data-action="clear">C</button>
+      <button class="btn btn-special" data-action="sign">±</button>
+      <button class="btn btn-special" data-action="percent">%</button>
+      <button class="btn btn-operator" data-action="divide">÷</button>
+
+      <!-- Linha 2 -->
+      <button class="btn btn-number">7</button>
+      <button class="btn btn-number">8</button>
+      <button class="btn btn-number">9</button>
+      <button class="btn btn-operator" data-action="multiply">×</button>
+
+      <!-- Linha 3 -->
+      <button class="btn btn-number">4</button>
+      <button class="btn btn-number">5</button>
+      <button class="btn btn-number">6</button>
+      <button class="btn btn-operator" data-action="subtract">−</button>
+
+      <!-- Linha 4 -->
+      <button class="btn btn-number">1</button>
+      <button class="btn btn-number">2</button>
+      <button class="btn btn-number">3</button>
+      <button class="btn btn-operator" data-action="add">+</button>
+
+      <!-- Linha 5 -->
+      <button class="btn btn-number zero">0</button>
+      <button class="btn btn-number">.</button>
+      <button class="btn btn-operator" data-action="equals">=</button>
+    </div>
+  </div>
+
+  <!-- Importa o arquivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

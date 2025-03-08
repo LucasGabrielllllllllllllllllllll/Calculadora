@@ -1,0 +1,104 @@
+/* Reseta margens/padding básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px; /* Garante espaçamento em telas menores */
+}
+
+/* Container geral da calculadora - agora maior e mais larga */
+.calculator {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  width: 500px;        /* Largura maior */
+  max-width: 90%;      /* Limite para telas muito pequenas */
+}
+
+/* Display onde aparece o resultado */
+.display {
+  width: 100%;
+  height: 80px;        /* Aumenta a altura do display */
+  font-size: 2.2em;    /* Aumenta o tamanho da fonte */
+  text-align: right;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+/* Área dos botões em grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Estilo básico dos botões */
+.btn {
+  font-size: 1.3em;    /* Aumenta o tamanho da fonte dos botões */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  padding: 18px;       /* Aumenta o padding dos botões */
+  transition: background-color 0.2s;
+  text-align: center;  /* Garante alinhamento central */
+}
+
+/* Botões numéricos */
+.btn-number {
+  background-color: #444;
+}
+.btn-number:hover {
+  background-color: #555;
+}
+
+/* Botões de operador (+, -, ×, ÷, =) */
+.btn-operator {
+  background-color: #FFA500;
+}
+.btn-operator:hover {
+  background-color: #ff9800;
+}
+
+/* Botões especiais (C, ±, %) */
+.btn-special {
+  background-color: #666;
+}
+.btn-special:hover {
+  background-color: #777;
+}
+
+/* Botão zero ocupando 2 colunas */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+  .display {
+    height: 60px;
+    font-size: 1.8em;
+  }
+  .btn {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
